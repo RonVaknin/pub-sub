@@ -12,7 +12,6 @@ const events = [];
 
 app.post('/events', (req, res) => {
     const event = req.body;
-    console.log('Received event', req.body)
     events.push(event);
     let status = 200;
     let statusString = "OK";
