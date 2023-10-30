@@ -15,10 +15,10 @@ app.post('/events', (req, res) => {
     events.push(event);
     let status = 200;
     let statusString = "OK";
-    axios.post('http://localhost:4000/events', event).catch(err => {console.error("failed 4000")});
-    axios.post('http://localhost:4001/events', event).catch(err => {console.error("failed 4001")});
-    axios.post('http://localhost:4002/events', event).catch(err => {console.error("failed 4002")});
-    axios.post('http://localhost:4003/events', event).catch(err => {console.error("failed 4003")});
+    axios.post('http://posts-clusterip-srv:4000/events', event).catch(err => {console.error("failed 4000")});
+    axios.post('http://comments-srv:4001/events', event).catch(err => {console.error("failed 4001")});
+    axios.post('http://query-srv:4002/events', event).catch(err => {console.error("failed 4002")});
+    axios.post('http://moderation-srv:4003/events', event).catch(err => {console.error("failed 4003")});
     res.send({ status: "OK" });
 });
 
