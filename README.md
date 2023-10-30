@@ -1,3 +1,5 @@
 # pub-sub
-Basic event bus impleentation
-educational purpose only
+Basic event bus impleentation for educational purpose only
+
+
+Using Docker, Kubernetes and ingress
